@@ -20,8 +20,26 @@ struct LandmarkList: View {
     }
 
     var body: some View {
-        NavigationView {
-            //List view
+//        NavigationView {
+//            //List view
+//            List {
+//                //toggling on show favorites only
+//                Toggle(isOn: $showFavoritesOnly) {
+//                    Text("Favorites only")
+//                }
+//                //put navigation in each landmark
+//                ForEach(filteredLandmarks) { landmark in
+//                    NavigationLink {
+//                        LandmarkDetail(landmark: landmark)
+//                    } label: {
+//                        LandmarkRow(landmark: landmark)
+//                    }
+//                }
+//            }
+//            //setting title for list
+//            .navigationTitle("Landmarks")
+//        }
+        NavigationStack{
             List {
                 //toggling on show favorites only
                 Toggle(isOn: $showFavoritesOnly) {
@@ -38,9 +56,10 @@ struct LandmarkList: View {
             }
             //setting title for list
             .navigationTitle("Landmarks")
+            
+            }
         }
     }
-}
 
 struct LandmarkList_Previews: PreviewProvider {
     static var previews: some View {

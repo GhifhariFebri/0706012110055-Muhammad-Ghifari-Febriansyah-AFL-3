@@ -13,6 +13,7 @@ final class ModelData: ObservableObject {
     //In short, you need @published to change the data
     @Published var landmarks: [Landmark] = load("landmarkData.json")
     var hikes: [Hike] = load("hikeData.json")
+    @Published var profile = Profile.default
     
     var features: [Landmark] {
         landmarks.filter { $0.isFeatured }
