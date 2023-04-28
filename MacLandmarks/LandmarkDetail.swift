@@ -8,6 +8,8 @@
 import SwiftUI
 import MapKit
 
+//Landmark Detail for Mac OS, not using reference because the model of the page is different
+//different preferences (MacLandmarks)
 struct LandmarkDetail: View {
     @EnvironmentObject var modelData: ModelData
     var landmark: Landmark
@@ -16,6 +18,7 @@ struct LandmarkDetail: View {
         modelData.landmarks.firstIndex(where: { $0.id == landmark.id })!
     }
 
+    //body is almost the same as ios landmark detail
     var body: some View {
         ScrollView {
             ZStack(alignment: Alignment(horizontal: .trailing, vertical: .top)) {

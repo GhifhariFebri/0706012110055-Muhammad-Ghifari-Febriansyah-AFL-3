@@ -8,6 +8,8 @@
 import Foundation
 import SwiftUI
 
+//for showing bar/sidebar
+//different preferences (MacLandmarks)
 struct LandmarkCommands: Commands {
     @FocusedBinding(\.selectedLandmark) var selectedLandmark
     
@@ -23,6 +25,7 @@ struct LandmarkCommands: Commands {
         }
     }
 }
+
 private struct SelectedLandmarkKey: FocusedValueKey {
     typealias Value = Binding<Landmark>
 }

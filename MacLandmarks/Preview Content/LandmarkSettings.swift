@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+//the landmark setting for mapview zoom
 struct LandmarkSettings: View {
     @AppStorage("MapView.zoom")
     private var zoom: MapView.Zoom = .medium

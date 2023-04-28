@@ -10,6 +10,7 @@ import SwiftUI
 struct ProfileEditor: View {
     @Binding var profile: Profile
     
+    //date Calendar
     var dateRange: ClosedRange<Date> {
         let min = Calendar.current.date(byAdding: .year, value: -1, to: profile.goalDate)!
         let max = Calendar.current.date(byAdding: .year, value: 1, to: profile.goalDate)!
@@ -18,6 +19,7 @@ struct ProfileEditor: View {
     
     var body: some View {
         List {
+            //since profile in modeldata is @published, user can change their profile here.
             HStack {
                 Text("Username").bold()
                 Divider()

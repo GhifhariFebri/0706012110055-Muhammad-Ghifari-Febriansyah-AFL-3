@@ -12,8 +12,10 @@ struct LandmarkList: View {
     @EnvironmentObject var modelData: ModelData
     @State private var showFavoritesOnly = false
     @State private var filter = FilterCategory.all
+    //adding selected landmark
     @State private var selectedLandmark: Landmark?
     
+    //adding filter category
     enum FilterCategory: String, CaseIterable, Identifiable {
         case all = "All"
         case lakes = "Lakes"
@@ -35,6 +37,7 @@ struct LandmarkList: View {
           return showFavoritesOnly ? "Favorite \(title)" : title
       }
     
+    //index for selected landmark
     var index: Int? {
         modelData.landmarks.firstIndex(where: { $0.id == selectedLandmark?.id })
     }

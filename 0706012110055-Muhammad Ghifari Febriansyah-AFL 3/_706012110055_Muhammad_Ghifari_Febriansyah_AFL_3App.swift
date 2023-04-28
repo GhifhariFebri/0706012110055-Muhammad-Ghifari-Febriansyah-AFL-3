@@ -16,12 +16,14 @@ struct _706012110055_Muhammad_Ghifari_Febriansyah_AFL_3App: App {
             ContentView()
                 .environmentObject(modelData)
         }
+        //Landmarkd Commands, for sidebar
         #if !os(watchOS)
         .commands {
             LandmarkCommands()
         }
         #endif
         
+        //Landmark Setting for MapView
         #if os(macOS)
         Settings {
             LandmarkSettings()

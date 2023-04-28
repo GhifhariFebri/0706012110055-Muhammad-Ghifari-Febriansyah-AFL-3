@@ -15,6 +15,7 @@ struct MapView: View {
     private var zoom: Zoom = .medium
 
     
+    //Zoom Setting for MapView
     enum Zoom: String, CaseIterable, Identifiable {
         case near = "Near"
         case medium = "Medium"

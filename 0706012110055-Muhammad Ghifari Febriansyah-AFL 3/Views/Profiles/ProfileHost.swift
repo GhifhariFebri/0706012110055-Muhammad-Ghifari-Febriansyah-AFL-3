@@ -12,6 +12,7 @@ struct ProfileHost: View {
     @EnvironmentObject var modelData: ModelData
     @State private var draftProfile = Profile.default
 
+    
     var body: some View {
         VStack(alignment: .leading, spacing: 20) {
             HStack {

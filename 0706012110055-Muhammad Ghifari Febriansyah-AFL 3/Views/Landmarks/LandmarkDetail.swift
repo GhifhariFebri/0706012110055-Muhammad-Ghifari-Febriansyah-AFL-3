@@ -32,6 +32,7 @@ struct LandmarkDetail: View {
                     Text(landmark.name)
                         .font(.title)
                     //deciding if the landmark is favorite or not
+                    //data is @published, so any changes to isfavorite will be changed
                     FavoriteButton(isSet: $modelData.landmarks[landmarkIndex].isFavorite)
                 }
 
